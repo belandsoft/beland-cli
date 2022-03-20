@@ -1,8 +1,5 @@
 # Beland CLI ![Beland Logo](css/logo.svg)
 
-[![CI](https://github.com/beland/cli/actions/workflows/ci.yml/badge.svg?branch=master&event=push)](https://github.com/beland/cli/actions/workflows/ci.yml)
-[![chat on Discord](https://img.shields.io/discord/417796904760639509.svg?logo=discord)](https://discordapp.com/invite/9EcuFgC)
-
 This CLI provides tooling/commands to assist you in the [scenes](https://github.com/beland-scenes/Awesome-Repository) development process. Some of the commands will help you scaffold a new scene project, locally start and visualize the scene in order to test it and deploy it to a [content server](https://github.com/beland/catalyst/tree/master/content) to be incorporated in your Beland parcel.
 
 ## Usage
