@@ -22,7 +22,7 @@
     "test:ci": "FORCE_COLOR=1 ava -v --fail-fast --match='!*E2E*' --match='!*Beland.deploy()*'",
     "test:win": "set FORCE_COLOR=1 ava -v --fail-fast --match=\"!*E2E*\" --match=\"!*Beland.deploy()*\""
   },
-  "repository": "beland/cli",
+  "repository": "https://github.com/belandsoft/beland-cli",
   "keywords": [
     "beland",
     "cli",
@@ -39,7 +39,7 @@
     ]
   },
   "license": "Apache-2.0",
-  "homepage": "https://github.com/beland/cli",
+  "homepage": "https://github.com/beland/beland-cli",
   "devDependencies": {
     "@dcl/eslint-config": "^1.0.1",
     "@types/analytics-node": "0.0.32",
