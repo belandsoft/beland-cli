@@ -16,7 +16,7 @@ npm install -g beland
 To learn what you can do with the CLI run the following command:
 
 ```bash
-dcl --help
+bld --help
 ```
 
 See more details at [Beland docs](https://docs.beland.org/getting-started/installation-guide).
@@ -40,16 +40,11 @@ Just update the version on the `package.json` file and merge to master.
 
 ## Configuration
 
-`dcl` can be configured in several ways to adapt it to another environment other than the default one. To do this you have to either set environment variables or change your `~/.dclinfo` file:
+`bld` can be configured in several ways to adapt it to another environment other than the default one. To do this you have to either set environment variables or change your `~/.bld` file:
 
-| Variable name            | Enviroment variable |  `~/.dclinfo`  |
+| Variable name            | Enviroment variable |  `~/.bld`  |
 | ------------------------ | :-----------------: | :------------: |
-| Provider                 |       RPC_URL       |       -        |
-| MANA Token Contract      |     MANA_TOKEN      |   MANAToken    |
-| LAND Registry Contract   |    LAND_REGISTRY    |  LANDRegistry  |
-| Estate Registry Contract |   ESTATE_REGISTRY   | EstateRegistry |
-| Content Server URL       |     CONTENT_URL     |   contentUrl   |
-| Segment API key          |     SEGMENT_KEY     |   segmentKey   |
+| API                      |       HTTP API       |       -       |
 
 ## Copyright info
 This repository is protected with a standard Apache 2 license. See the terms and conditions in the [LICENSE](https://github.com/beland/cli/blob/master/LICENSE) file.
