@@ -1,6 +1,6 @@
-# Beland CLI ![Beland Logo](css/logo.svg)
+# Beland CLI ![Beland Logo]
 
-This CLI provides tooling/commands to assist you in the [scenes](https://github.com/beland-scenes/Awesome-Repository) development process. Some of the commands will help you scaffold a new scene project, locally start and visualize the scene in order to test it and deploy it to a [content server](https://github.com/beland/catalyst/tree/master/content) to be incorporated in your Beland parcel.
+This CLI provides tooling/commands to assist you in the [scenes](https://github.com/beland-scenes/Awesome-Repository) development process. Some of the commands will help you scaffold a new scene project, locally start and visualize the scene in order to test it and deploy it to a ipfs to be incorporated in your Beland parcel.
 
 ## Usage
 
