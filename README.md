@@ -40,11 +40,11 @@ Just update the version on the `package.json` file and merge to master.
 
 ## Configuration
 
-`bld` can be configured in several ways to adapt it to another environment other than the default one. To do this you have to either set environment variables or change your `~/.bld` file:
+`bld` can be configured in several ways to adapt it to another environment other than the default one. To do this you have to either set environment variables or change your `~/.bldinfo` file:
 
-| Variable name            | Enviroment variable |  `~/.bld`  |
+| Variable name            | Enviroment variable |  `~/.bldinfo`  |
 | ------------------------ | :-----------------: | :------------: |
-| API                      |       HTTP API       |       -       |
+| API                      |       API       |       -       |
 
 ## Copyright info
 This repository is protected with a standard Apache 2 license. See the terms and conditions in the [LICENSE](https://github.com/beland/cli/blob/master/LICENSE) file.
