@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "commonjs",
+    "noUnusedLocals": true,
+    "preserveConstEnums": true,
+    "declaration": true,
+    "declarationMap": true,
+    "diagnostics": true,
+    "sourceMap": true,
+    "lib": [
+      "es2016",
+      "dom"
+    ],
+    "types": [
+      "node"
+    ],
+    "strict": true,
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true
+  },
+  "exclude": [
+    "dist",
+    "node_modules",
+    "**/*.test.ts",
+    "samples/*"
+  ],
+  "include": [
+    "decs.d.ts",
+    "src",
+    "typings"
+  ]
+}
