@@ -2,7 +2,7 @@ export const repos = {
     scenes: [
       {
         title: 'Cube spawner',
-        url: 'https://github.com/beland-scenes/cube-spawner/archive/refs/heads/main.zip'
+        url: 'https://github.com/beland-scenes/cube-spawner/archive/refs/heads/master.zip'
       }
     ],
     library:
