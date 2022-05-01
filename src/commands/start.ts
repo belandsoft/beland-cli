@@ -27,11 +27,11 @@ export const help = () => `
 
     ${chalk.dim("Examples:")}
 
-    - Start a local development server for a Decentraland Scene at port 3500
+    - Start a local development server for a Beland Scene at port 3500
 
       ${chalk.green("$ bld start -p 3500")}
 
-    - Start a local development server for a Decentraland Scene at a docker container
+    - Start a local development server for a Beland Scene at a docker container
 
       ${chalk.green("$ bld start --ci")}
 `;

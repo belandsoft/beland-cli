@@ -1,4 +1,4 @@
-import { Scene } from "@dcl/schemas";
+import { Scene } from "@beland/schemas";
 import { EventEmitter } from "events";
 import chalk from "chalk";
 import { ethers } from "ethers";
@@ -63,8 +63,8 @@ export class Beland extends EventEmitter {
     debug(`Working directory: ${chalk.bold(this.options.workingDir)}`);
     this.workspace = createWorkspace({ workingDir: this.options.workingDir });
 
-    if (process.env.DCL_PRIVATE_KEY) {
-      this.createWallet(process.env.DCL_PRIVATE_KEY);
+    if (process.env.BLD_PRIVATE_KEY) {
+      this.createWallet(process.env.BLD_PRIVATE_KEY);
     }
   }
 

@@ -2,7 +2,7 @@ import path from "path";
 import fs from "fs-extra";
 import { readJSONSync } from "../utils/filesystem";
 import { copySample, Project } from "./Project";
-import { sdk } from "@dcl/schemas";
+import { sdk } from "@beland/schemas";
 
 interface WorkspaceProjectSchema {
   name?: string;
@@ -13,7 +13,7 @@ interface WorkspaceFileSchema {
   folders: WorkspaceProjectSchema[];
 }
 
-export const workspaceConfigFile = "dcl-workspace.json";
+export const workspaceConfigFile = "bld-workspace.json";
 
 function getWorkspaceJsonWithFolders(workspaceJsonPath: string): {
   json?: WorkspaceFileSchema;

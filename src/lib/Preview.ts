@@ -11,7 +11,7 @@ import glob from "glob";
 import chokidar from "chokidar";
 import url from "url";
 import { default as ignore } from "ignore";
-import { sdk } from "@dcl/schemas";
+import { sdk } from "@beland/schemas";
 
 import proto from "./proto/broker";
 import { fail, ErrorType } from "../utils/errors";
@@ -91,13 +91,13 @@ export class Preview extends EventEmitter {
     const bldEcsPath = path.resolve(
       this.bld.getWorkingDir(),
       "node_modules",
-      "decentraland-ecs"
+      "beland-ecs"
     );
     const proxySetupPath = path.resolve(bldEcsPath, "src", "setupProxy.js");
     const dclApiPath = path.resolve(
       this.bld.getWorkingDir(),
       "node_modules",
-      "decentraland-api"
+      "beland-api"
     );
 
     const artifactPath = fs.pathExistsSync(bldEcsPath)

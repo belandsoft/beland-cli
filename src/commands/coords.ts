@@ -1,4 +1,4 @@
-import { Scene, sdk } from "@dcl/schemas";
+import { Scene, sdk } from "@beland/schemas";
 import chalk from "chalk";
 
 import { fail, ErrorType } from "../utils/errors";

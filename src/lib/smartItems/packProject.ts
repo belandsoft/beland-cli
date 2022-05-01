@@ -3,7 +3,7 @@ import archiver from 'archiver'
 
 const blacklist = [
   'item.zip',
-  '.dclignore',
+  '.bldignore',
   'Dockerfile',
   'tsconfig.json',
   'scene.json',

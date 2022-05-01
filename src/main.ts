@@ -105,7 +105,7 @@ export async function main(version: string) {
           `The "${chalk.bold(
             subcommand
           )}" option does not exist, run ${chalk.bold(
-            '"dcl help"'
+            '"bld help"'
           )} for more info.`
         )
       );
@@ -116,7 +116,7 @@ export async function main(version: string) {
         `The "${chalk.bold(
           subcommand
         )}" subcommand does not exist, run ${chalk.bold(
-          '"dcl help"'
+          '"bld help"'
         )} for more info.`
       )
     );
@@ -129,8 +129,8 @@ export async function main(version: string) {
   } catch (e: any) {
     console.error(
       log.error(
-        `\`${chalk.green(`dcl ${subcommand}`)}\` ${e.message}, run ${chalk.bold(
-          `"dcl help ${subcommand}"`
+        `\`${chalk.green(`bld ${subcommand}`)}\` ${e.message}, run ${chalk.bold(
+          `"bld help ${subcommand}"`
         )} for more info.`
       )
     );

@@ -1,6 +1,6 @@
 import path from 'path'
 import fs from 'fs-extra'
-import { sdk } from '@dcl/schemas'
+import { sdk } from '@beland/schemas'
 
 export type ProjectInfo = {
   sceneId: string

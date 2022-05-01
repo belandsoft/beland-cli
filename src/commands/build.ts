@@ -2,9 +2,12 @@ import chalk from "chalk";
 
 import { createWorkspace } from "../lib/Workspace";
 import { fail } from "assert";
+import arg from "arg";
+import { buildTypescript, checkECSAndCLIVersions } from "../utils/moduleHelpers";
+import { isTypescriptProject } from "../project/isTypescriptProject";
 
 export const help = () => `
-  Usage: ${chalk.bold("dcl build [options]")}
+  Usage: ${chalk.bold("bld build [options]")}
 
     ${chalk.dim("Options:")}
 
@@ -21,11 +24,34 @@ export const help = () => `
 `;
 
 export async function main(): Promise<number> {
+  const args = arg({
+    '--help': Boolean,
+    '-h': '--help',
+    '--watch': String,
+    '-w': '--watch',
+    '--skip-version-checks': Boolean,
+    '--production': Boolean,
+    '-p': '--production'
+  })
+
   const workingDir = process.cwd();
   const workspace = createWorkspace({ workingDir });
+  const skipVersionCheck = args['--skip-version-checks']
 
   if (!workspace.isSingleProject()) {
     fail(`Can not build a workspace. It isn't supported yet.`);
+  }
+
+  if (!skipVersionCheck) {
+    await checkECSAndCLIVersions(workingDir)
+  }
+
+  if (await isTypescriptProject(workingDir)) {
+    await buildTypescript({
+      workingDir: workingDir,
+      watch: !!args['--watch'],
+      production: !!args['--production']
+    })
   }
 
   return 0;

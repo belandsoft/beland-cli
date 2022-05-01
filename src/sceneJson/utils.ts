@@ -1,5 +1,5 @@
 import chalk from "chalk";
-import { Scene } from "@dcl/schemas";
+import { Scene } from "@beland/schemas";
 
 import * as spinner from "../utils/spinner";
 
@@ -30,8 +30,8 @@ export function validateScene(sceneJson: Scene, log: boolean = false): boolean {
   }
 
   const defaults: Scene["display"] = {
-    title: "DCL Scene",
-    description: "My new Decentraland project",
+    title: "BLD Scene",
+    description: "My new Beland project",
     navmapThumbnail: "images/scene-thumbnail.png",
   };
   const sceneDisplay = sceneJson.display || {};

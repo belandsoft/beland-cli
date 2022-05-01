@@ -5,6 +5,6 @@ updates:
     schedule:
       interval: daily
     allow:
-      - dependency-name: "@dcl/*"
-      - dependency-name: "dcl-*"
+      - dependency-name: "@beland/*"
+      - dependency-name: "beland-*"
     versioning-strategy: increase

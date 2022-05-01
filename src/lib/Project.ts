@@ -2,7 +2,7 @@ import path from "path";
 import dockerNames from "docker-names";
 import fs from "fs-extra";
 import ignore from "ignore";
-import { Scene, sdk } from "@dcl/schemas";
+import { Scene, sdk } from "@beland/schemas";
 
 import { writeJSON, readJSON, isEmptyDirectory } from "../utils/filesystem";
 import {

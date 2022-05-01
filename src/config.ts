@@ -18,7 +18,7 @@ function getBLDInfoPath(): string {
 }
 
 /**
- * Reads the contents of the `.dclinfo` file
+ * Reads the contents of the `.bldinfo` file
  */
 async function readBLDInfo(): Promise<BLDInfo | null> {
   const filePath = getBLDInfoPath();
@@ -31,7 +31,7 @@ async function readBLDInfo(): Promise<BLDInfo | null> {
 }
 
 /**
- * Creates the `.dclinfo` file in the HOME directory
+ * Creates the `.bldinfo` file in the HOME directory
  */
 export function createBLDInfo(info: BLDInfo) {
   config = info;
@@ -39,14 +39,14 @@ export function createBLDInfo(info: BLDInfo) {
 }
 
 /**
- * Add new configuration to `.dclinfo` file
+ * Add new configuration to `.bldinfo` file
  */
-export async function writeDCLInfo(newInfo: BLDInfo) {
+export async function writBLDInfo(newInfo: BLDInfo) {
   return writeJSON(getBLDInfoPath(), { ...config, newInfo });
 }
 
 /**
- * Reads `.dclinfo` file and loads it in-memory to be sync-obtained with `getBLDInfo()` function
+ * Reads `.bldinfo` file and loads it in-memory to be sync-obtained with `getBLDInfo()` function
  */
 export async function loadConfig(network: string): Promise<BLDInfo> {
   networkFlag = network;
