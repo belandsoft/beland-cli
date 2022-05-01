@@ -1,4 +1,4 @@
-# Beland CLI ![Beland Logo]
+# Beland CLI
 
 This CLI provides tooling/commands to assist you in the [scenes](https://github.com/beland-scenes/Awesome-Repository) development process. Some of the commands will help you scaffold a new scene project, locally start and visualize the scene in order to test it and deploy it to a ipfs to be incorporated in your Beland parcel.
 
