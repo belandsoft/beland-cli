@@ -3,11 +3,5 @@ export default new Set<string>([
   "build",
   "start",
   "deploy",
-  "info",
-  "status",
   "help",
-  "pack",
-  "install",
-  "coords",
-  "workspace",
 ]);
