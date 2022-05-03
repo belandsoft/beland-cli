@@ -1,4 +1,4 @@
-import { sdk } from '@dcl/schemas'
+import { sdk } from '@beland/schemas'
 import inquirer, { QuestionCollection } from 'inquirer'
 import chalk from 'chalk'
 
@@ -47,7 +47,7 @@ export async function getInitOption(type?: string): Promise<InitOption> {
         {
           name: 'Smart Wearable (Beta)',
           value: sdk.ProjectType.PORTABLE_EXPERIENCE
-        },
+        }
         // {
         //   name: 'Library',
         //   value: sdk.ProjectType.LIBRARY
@@ -80,9 +80,9 @@ export function getRepositoryUrl(choice: InitOption): string | void {
     return repositories.scenes[0].url
   }
 
-//   if (choice.value === sdk.ProjectType.LIBRARY) {
-//     return repositories.library
-//   }
+  //   if (choice.value === sdk.ProjectType.LIBRARY) {
+  //     return repositories.library
+  //   }
 
   if (choice.value === sdk.ProjectType.SMART_ITEM) {
     return repositories.smartItem

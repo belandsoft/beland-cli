@@ -33,7 +33,6 @@ export async function main() {
     return
   }
 
-
   try {
     spinner.create('Downloading example...')
 

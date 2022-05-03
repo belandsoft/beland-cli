@@ -1,16 +1,27 @@
-import axios from "axios";
-export function uploadFile(form: any) {
+import axios from 'axios'
+import { Authenticator, AuthIdentity } from 'beland-crypto'
+export function uploadFile(form: any, authIdentity: AuthIdentity) {
+  const authLink = Authenticator.signPayload(authIdentity, 'post:/upload')
   return axios
-    .post("http://localhost:5040/upload", form, {
+    .post('https://nft-api-test.beland.io/v1/upload', form, {
       headers: {
         ...form.getHeaders(),
-      },
+        Authorization: 'Bearer ' + btoa(JSON.stringify(authLink))
+      }
     })
-    .then((res) => res.data);
+    .then((res) => res.data)
 }
 
-export function createMetadata(data: any) {
+export function createMetadata(data: any, authIdentity: AuthIdentity) {
+  const authLink = Authenticator.signPayload(
+    authIdentity,
+    'post:/upload/metadata'
+  )
   return axios
-    .post("http://localhost:5040/metadata", data)
-    .then((res) => res.data);
+    .post('https://nft-api-test.beland.io/v1/upload/metadata', data, {
+      headers: {
+        Authorization: 'Bearer ' + btoa(JSON.stringify(authLink))
+      }
+    })
+    .then((res) => res.data)
 }
