@@ -1,6 +1,6 @@
 {
   "name": "beland",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Beland CLI developer tool.",
   "bin": {
     "bld": "dist/index.js"
