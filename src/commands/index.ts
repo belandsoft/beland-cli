@@ -1,7 +1,8 @@
 export default new Set<string>([
-  "init",
-  "build",
-  "start",
-  "deploy",
-  "help",
-]);
+  'init',
+  'build',
+  'start',
+  'deploy',
+  'help',
+  'pack'
+])

@@ -9,6 +9,8 @@ import { isEnvCi } from '../utils/env'
 import * as spinner from '../utils/spinner'
 import isECSInstalled from '../project/isECSInstalled'
 import { lintSceneFile } from '../sceneJson/lintSceneFile'
+import { buildTypescript } from '../utils/moduleHelpers'
+import installDependencies from '../project/installDependencies'
 
 export const help = () => `
   Usage: ${chalk.bold('bld start [options]')}
@@ -79,6 +81,21 @@ export async function main() {
 
       if (!ECSInstalled) {
         spinner.info('SDK not found. Installing dependencies...')
+      }
+
+      if (!ECSInstalled) {
+        await installDependencies(
+          project.getProjectWorkingDir(),
+          false /* silent */
+        )
+      }
+
+      if (await project.isTypescriptProject()) {
+        await buildTypescript({
+          workingDir: project.getProjectWorkingDir(),
+          watch: true,
+          production: false
+        })
       }
     }
 
